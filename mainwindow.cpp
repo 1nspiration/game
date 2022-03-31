@@ -60,6 +60,23 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(ui->button_leisure_events13, &QPushButton::clicked, this, &MainWindow::LeisureEvents13);
     QObject::connect(ui->button_leisure_events14, &QPushButton::clicked, this, &MainWindow::LeisureEvents14);
     QObject::connect(ui->button_leisure_events15, &QPushButton::clicked, this, &MainWindow::LeisureEvents15);
+    // коннекторы для работ
+    QObject::connect(ui->ButtonWorkEvents1, &QPushButton::clicked, this, &MainWindow::WorkEvents1);
+    QObject::connect(ui->ButtonWorkEvents2, &QPushButton::clicked, this, &MainWindow::WorkEvents2);
+    QObject::connect(ui->ButtonWorkEvents3, &QPushButton::clicked, this, &MainWindow::WorkEvents3);
+    QObject::connect(ui->ButtonWorkEvents4, &QPushButton::clicked, this, &MainWindow::WorkEvents4);
+    QObject::connect(ui->ButtonWorkEvents5, &QPushButton::clicked, this, &MainWindow::WorkEvents5);
+    QObject::connect(ui->ButtonWorkEvents6, &QPushButton::clicked, this, &MainWindow::WorkEvents6);
+    QObject::connect(ui->ButtonWorkEvents7, &QPushButton::clicked, this, &MainWindow::WorkEvents7);
+    QObject::connect(ui->ButtonWorkEvents8, &QPushButton::clicked, this, &MainWindow::WorkEvents8);
+    QObject::connect(ui->ButtonWorkEvents9, &QPushButton::clicked, this, &MainWindow::WorkEvents9);
+    QObject::connect(ui->ButtonWorkEvents10, &QPushButton::clicked, this, &MainWindow::WorkEvents10);
+    QObject::connect(ui->ButtonWorkEvents11, &QPushButton::clicked, this, &MainWindow::WorkEvents11);
+    QObject::connect(ui->ButtonWorkEvents12, &QPushButton::clicked, this, &MainWindow::WorkEvents12);
+    QObject::connect(ui->ButtonWorkEvents13, &QPushButton::clicked, this, &MainWindow::WorkEvents13);
+    QObject::connect(ui->ButtonWorkEvents14, &QPushButton::clicked, this, &MainWindow::WorkEvents14);
+    QObject::connect(ui->ButtonWorkEvents15, &QPushButton::clicked, this, &MainWindow::WorkEvents15);
+
 
     setFixedSize                            (1000, 600);
 
@@ -249,6 +266,67 @@ void MainWindow::LeisureEvents14()
 
 }
 void MainWindow::LeisureEvents15()
+{
+
+}
+//кнопки работ
+void MainWindow::WorkEvents1()
+{
+
+}
+void MainWindow::WorkEvents2()
+{
+
+}
+void MainWindow::WorkEvents3()
+{
+
+}
+void MainWindow::WorkEvents4()
+{
+
+}
+void MainWindow::WorkEvents5()
+{
+
+}
+void MainWindow::WorkEvents6()
+{
+
+}
+void MainWindow::WorkEvents7()
+{
+
+}
+void MainWindow::WorkEvents8()
+{
+
+}
+void MainWindow::WorkEvents9()
+{
+
+}
+void MainWindow::WorkEvents10()
+{
+
+}
+void MainWindow::WorkEvents11()
+{
+
+}
+void MainWindow::WorkEvents12()
+{
+
+}
+void MainWindow::WorkEvents13()
+{
+
+}
+void MainWindow::WorkEvents14()
+{
+
+}
+void MainWindow::WorkEvents15()
 {
 
 }

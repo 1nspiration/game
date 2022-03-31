@@ -74,6 +74,24 @@ private slots:
     void LeisureEvents13();
     void LeisureEvents14();
     void LeisureEvents15();
+    // и тут
+    void WorkEvents1();
+    void WorkEvents2();
+    void WorkEvents3();
+    void WorkEvents4();
+    void WorkEvents5();
+    void WorkEvents6();
+    void WorkEvents7();
+    void WorkEvents8();
+    void WorkEvents9();
+    void WorkEvents10();
+    void WorkEvents11();
+    void WorkEvents12();
+    void WorkEvents13();
+    void WorkEvents14();
+    void WorkEvents15();
+
+
 
 };
 
