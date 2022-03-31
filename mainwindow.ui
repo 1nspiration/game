@@ -1396,7 +1396,7 @@ font: 16pt &quot;Segoe UI&quot;;</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_7">
        <item>
-        <widget class="QPushButton" name="button_back_title3_2">
+        <widget class="QPushButton" name="button_back_title4">
          <property name="styleSheet">
           <string notr="true">font: 16pt &quot;Segoe UI&quot;,rgb(0,0,0);</string>
          </property>

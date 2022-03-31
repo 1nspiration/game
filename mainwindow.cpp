@@ -22,10 +22,13 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(ui->button_back_title, &QPushButton::clicked, this, &MainWindow::backToTitle);
     QObject::connect(ui->button_back_title2, &QPushButton::clicked, this, &MainWindow::backToTitle);
     QObject::connect(ui->button_back_title3, &QPushButton::clicked, this, &MainWindow::backToTitle);
+    QObject::connect(ui->button_back_title4, &QPushButton::clicked, this, &MainWindow::backToTitle);
     QObject::connect(ui->ButtonGoToShop, &QPushButton::clicked, this, &MainWindow::ShopTitle);
     QObject::connect(ui->ButtonGoToShop3, &QPushButton::clicked, this, &MainWindow::ShopTitle);
+    QObject::connect(ui->ButtonGoToShop4, &QPushButton::clicked, this, &MainWindow::ShopTitle);
     QObject::connect(ui->BackToStats, &QPushButton::clicked, this, &MainWindow::BackToStatsTitle);
     QObject::connect(ui->BackToStats_2, &QPushButton::clicked, this, &MainWindow::BackToStatsTitle);
+    QObject::connect(ui->BackToStats_3, &QPushButton::clicked, this, &MainWindow::BackToStatsTitle);
     QObject::connect(ui->ButtonGoToLeisure1, &QPushButton::clicked, this, &MainWindow::leisureTitle);
     QObject::connect(ui->ButtonGoToLeisure2, &QPushButton::clicked, this, &MainWindow::leisureTitle);
     //коннекторы для еды (выглядит, конечно, мощно)
