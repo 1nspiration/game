@@ -67,7 +67,14 @@ void MainWindow::onTick()
         game_over = true;
         emit(backToTitle());
     }
-
+    if(satiety > 100.0)
+    {
+        satiety=100;
+    }
+    if(mental_condition > 100.0)
+    {
+        mental_condition=100;
+    }
     ui->label_date->                    setText     ("Дата: " + QString::number(day) + "." + QString::number(month) + "." + QString::number(year));
     ui->progressBar_hunger->            setFormat   ("Сытость: " + QString::number(satiety) + ", затрата на день: " + QString::number(hunger));
     ui->progressBar_mental_condition->  setFormat   ("Настроение: " + QString::number(mental_condition) + ", затрата на день: " + QString::number(tireness));
