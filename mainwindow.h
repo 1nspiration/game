@@ -96,8 +96,7 @@ private slots:
     void LeisureOption13();  //Отправиться в путешествие
     // слоты для рандомных ивентов
     void RandomEventsPoisoning(); // отравление
-    void RandomEventsEasyMoney(); // находка случайных денег
-
+    void RandomEventsEasymoney(); // находка случайных денег
 };
 
 #endif // MAINWINDOW_H
