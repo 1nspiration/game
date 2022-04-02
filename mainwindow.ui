@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="GameWindow">
+   <property name="minimumSize">
+    <size>
+     <width>1000</width>
+     <height>600</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1000</width>
+     <height>600</height>
+    </size>
+   </property>
+   <widget class="QStackedWidget" name="stack">
+    <property name="geometry">
+     <rect>
+      <x>149</x>
+      <y>-1</y>
+      <width>831</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="TitleScreen">
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>240</y>
+        <width>851</width>
+        <height>321</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="layout_title_buttons">
+       <property name="leftMargin">
+        <number>300</number>
+       </property>
+       <property name="rightMargin">
+        <number>300</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="button_play">
+         <property name="text">
+          <string>Играть</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="button_quit">
+         <property name="text">
+          <string>Выйти</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_name">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>841</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>СИМУЛЯТОР СТУДЕНТА</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="StatsScreen">
+     <widget class="QWidget" name="verticalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>89</y>
+        <width>691</width>
+        <height>481</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="layout_allstats">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QVBoxLayout" name="layout_money">
+         <item>
+          <widget class="QLabel" name="label_money">
+           <property name="text">
+            <string>Деньги</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_job">
+           <property name="text">
+            <string>Работа</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar_hunger">
+         <property name="value">
+          <number>24</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar_mental_condition">
+         <property name="value">
+          <number>24</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar_health">
+         <property name="value">
+          <number>24</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_date">
+         <property name="text">
+          <string>Дата</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_stats_greeting">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>40</y>
+        <width>431</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Характеристики</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="JobsScreen">
+     <widget class="QLabel" name="label_jobs_greeting">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>40</y>
+        <width>431</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Работа</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>401</x>
+        <y>120</y>
+        <width>422</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="layout_jobs_options">
+       <item row="6" column="0">
+        <widget class="QPushButton" name="button_jobs_option7">
+         <property name="text">
+          <string>C++-разработчик в крупной компании [70000 р./мес.]</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="button_jobs_option2">
+         <property name="text">
+          <string>Продавец-кассир в продуктовом магазине [10000 р./мес.]</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="button_jobs_option3">
+         <property name="text">
+          <string>Администратор в продуктовом магазине [15000 р./мес.]</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QPushButton" name="button_jobs_option8">
+         <property name="text">
+          <string>Тимлид в крупном проекте [100000 р./мес.]</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QPushButton" name="button_jobs_option5">
+         <property name="text">
+          <string>Backend-разработчик в маленькой компании [25000 р./мес.]</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QPushButton" name="button_jobs_option9">
+         <property name="text">
+          <string>Глава отдела в международной компании [160000 р./мес.]</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QPushButton" name="button_jobs_option6">
+         <property name="text">
+          <string>Java-разработчик в средней компании [45000 р./мес.]</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QPushButton" name="button_jobs_option4">
+         <property name="text">
+          <string>HTML-верстальщик в маленькой компании [17000 р./мес.]</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="button_jobs_option1">
+         <property name="text">
+          <string>Уборщик в маке [8000 р./мес.]</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QPushButton" name="button_jobs_option10">
+         <property name="text">
+          <string>CEO регионального филиала в международной компании [320000 р./мес.]</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_jobs_fulltime">
+      <property name="geometry">
+       <rect>
+        <x>438</x>
+        <y>90</y>
+        <width>391</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Полная занятость</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="ShopScreen">
+     <widget class="QLabel" name="label_shop_greeting">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>40</y>
+        <width>431</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Магазин</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>119</y>
+        <width>551</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="layout_shop_options">
+       <item row="7" column="0">
+        <widget class="QPushButton" name="button_shop_option8">
+         <property name="text">
+          <string>Поесть в кафе</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="label_option4_desctiption">
+         <property name="text">
+          <string>[Сытность: 15, цена: 150]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="1">
+        <widget class="QLabel" name="label_option14_desctiption">
+         <property name="text">
+          <string>[Сытность: 85, цена: 20000]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QPushButton" name="button_shop_option7">
+         <property name="text">
+          <string>Замутить карри</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QLabel" name="label_option9_desctiption">
+         <property name="text">
+          <string>[Сытность: 30, цена: 1200]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="button_shop_option1">
+         <property name="text">
+          <string>Покопаться в мусорке</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="button_shop_option2">
+         <property name="text">
+          <string>Съесть дошик</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="0">
+        <widget class="QPushButton" name="button_shop_option13">
+         <property name="text">
+          <string>Устроить шведский стол</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QPushButton" name="button_shop_option5">
+         <property name="text">
+          <string>Замутить простое блюдо</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QPushButton" name="button_shop_option6">
+         <property name="text">
+          <string>Съесть макароны с сыром</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QPushButton" name="button_shop_option4">
+         <property name="text">
+          <string>Скушать шаурму</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0">
+        <widget class="QPushButton" name="button_shop_option12">
+         <property name="text">
+          <string>Нанять личного повара</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="button_shop_option3">
+         <property name="text">
+          <string>Съесть качественный дошик</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="1">
+        <widget class="QLabel" name="label_option11_desctiption">
+         <property name="text">
+          <string>[Сытность: 40, цена: 7000]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QLabel" name="label_option8_desctiption">
+         <property name="text">
+          <string>[Сытность: 25, цена: 700]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="0">
+        <widget class="QPushButton" name="button_shop_option14">
+         <property name="text">
+          <string>Чревоугодничать</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLabel" name="label_option7_desctiption">
+         <property name="text">
+          <string>[Сытность: 22, цена: 450]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_option1_description">
+         <property name="text">
+          <string>[Cытность: 3, цена: 0]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="label_option3_desctiption">
+         <property name="text">
+          <string>[Сытность: 7, цена: 100]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QPushButton" name="button_shop_option10">
+         <property name="text">
+          <string>Сходить в хороший ресторан</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0">
+        <widget class="QPushButton" name="button_shop_option11">
+         <property name="text">
+          <string>Посетить ресторан с мишлен</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="1">
+        <widget class="QLabel" name="label_option13_desctiption">
+         <property name="text">
+          <string>[Сытность: 70, цена: 17000]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="1">
+        <widget class="QLabel" name="label_option12_desctiption">
+         <property name="text">
+          <string>[Сытность: 50, цена: 10000]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QPushButton" name="button_shop_option9">
+         <property name="text">
+          <string>Сходить в бюджетный ресторан</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QLabel" name="label_option10_desctiption">
+         <property name="text">
+          <string>[Сытность: 35, цена: 3000]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="label_option2_desctiption">
+         <property name="text">
+          <string>[Сытность: 5, цена: 50]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLabel" name="label_option6_desctiption">
+         <property name="text">
+          <string>[Сытность: 20, цена: 350]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLabel" name="label_option5_desctiption">
+         <property name="text">
+          <string>[Сытность: 17, цена: 300]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="0">
+        <widget class="QPushButton" name="button_shop_option15">
+         <property name="text">
+          <string>Нажраться до греха</string>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="1">
+        <widget class="QLabel" name="label_option15_desctiption">
+         <property name="text">
+          <string>[Сытность: 100, цена: 30000]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="LeisureScreen">
+     <widget class="QWidget" name="gridLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>110</y>
+        <width>551</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="layout_leisure_options">
+       <item row="1" column="1">
+        <widget class="QLabel" name="label_option2_desctiption_2">
+         <property name="text">
+          <string>[Настроение: 5, цена: 50, здровье: -3]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="label_option3_desctiption_2">
+         <property name="text">
+          <string>[Настроение: 7, цена: 100, здоровье: +3]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QPushButton" name="button_leisure_option6">
+         <property name="text">
+          <string>Устроить тусовку в общаге</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0">
+        <widget class="QPushButton" name="button_leisure_option11">
+         <property name="text">
+          <string>Сходить на свидание</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QPushButton" name="button_leisure_option8">
+         <property name="text">
+          <string>Посетить культурное мероприятие</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QPushButton" name="button_leisure_option5">
+         <property name="text">
+          <string>Сходить в баньку</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="1">
+        <widget class="QLabel" name="label_option12_desctiption_2">
+         <property name="text">
+          <string>[Настроение: 50, цена: 10000]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QPushButton" name="button_leisure_option4">
+         <property name="text">
+          <string>Слушать музыку на максимальной громкости</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="label_option4_desctiption_2">
+         <property name="text">
+          <string>[Настроение: 15, цена: 150]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="0">
+        <widget class="QPushButton" name="button_leisure_option13">
+         <property name="text">
+          <string>Отправиться в путешествие</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_option1_description_2">
+         <property name="text">
+          <string>[Настроение: 3, цена: 0]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="button_leisure_option1">
+         <property name="text">
+          <string>Помечтать о счастливом будущем</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QLabel" name="label_option10_desctiption_2">
+         <property name="text">
+          <string>[Настроение: 35, цена: 3000, здоровье: -10]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QLabel" name="label_option9_desctiption_2">
+         <property name="text">
+          <string>[Настроение: 30, цена: 1200]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0">
+        <widget class="QPushButton" name="button_leisure_option12">
+         <property name="text">
+          <string>Заняться экстремальными видами спорта</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QLabel" name="label_option8_desctiption_2">
+         <property name="text">
+          <string>[Настроение: 25, цена: 700]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLabel" name="label_option6_desctiption_2">
+         <property name="text">
+          <string>[Настроение: 20, цена: 350, здоровье: -5]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="1">
+        <widget class="QLabel" name="label_option13_desctiption_2">
+         <property name="text">
+          <string>[Настроение: 70, цена: 17000]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="button_leisure_option3">
+         <property name="text">
+          <string>Погулять</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QPushButton" name="button_leisure_option10">
+         <property name="text">
+          <string>Сходить в бар</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="1">
+        <widget class="QLabel" name="label_option11_desctiption_2">
+         <property name="text">
+          <string>[Настроение: 40, цена: 7000]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="button_leisure_option2">
+         <property name="text">
+          <string>Покурить</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLabel" name="label_option7_desctiption_2">
+         <property name="text">
+          <string>[Настроение: 22, цена: 450, здоровье: -7]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QPushButton" name="button_leisure_option7">
+         <property name="text">
+          <string>Сходить в дешевый клуб</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QPushButton" name="button_leisure_option9">
+         <property name="text">
+          <string>Сходить в качалку</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLabel" name="label_option5_desctiption_2">
+         <property name="text">
+          <string>[Настроение: 17, цена: 300]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_leisure_greeting">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>30</y>
+        <width>431</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Развлечения</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_game_buttons">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>19</y>
+      <width>121</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>101</width>
+       <height>531</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="layout_game_buttons">
+      <item>
+       <widget class="QPushButton" name="button_stats">
+        <property name="text">
+         <string>Характеристики</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_jobs">
+        <property name="text">
+         <string>Работа</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_leisure">
+        <property name="text">
+         <string>Досуг</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_shop">
+        <property name="text">
+         <string>Магазин</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_back_title">
+        <property name="text">
+         <string>В главное меню</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
