@@ -250,6 +250,7 @@ void MainWindow::LoadSave()
     damage=point.damage;
     jobID=point.jobID;
     tireness=point.tireness;
+    jobStatus(jobID);
     }
 
   }
