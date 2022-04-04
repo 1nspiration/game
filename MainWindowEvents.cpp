@@ -6,9 +6,6 @@
 //(2)(JobsScreen) - работа
 //(3)(ShopScreen) - магазин еды
 #include "mainwindow.cpp"
-#include <fstream>
-#include <string>
-#include <stdlib.h>
 void MainWindow::quit()
 {
     QApplication::quit();
@@ -205,9 +202,20 @@ void MainWindow::jobStatus(int id)
 }
 void MainWindow::Save()
 {
-    MainWindow save;
+    save save;
+    save.money=money;
+    save.day=day;
+    save.month=month;
+    save.year=year;
+    save.satiety=satiety;
+    save.hunger=hunger;
+    save.mental_condition=mental_condition;
+    save.HP=HP;
+    save.damage=damage;
+    save.jobID=jobID;
+    save.tireness=tireness;
     std::ofstream fout;
-    fout.open("save.txt",std::ios::binary | std::ios::out);
+    fout.open("save.dat",std::ios::binary | std::ios::out);
     if (!fout.is_open())
     {
         QMessageBox::critical(this,"","Error");
@@ -215,7 +223,7 @@ void MainWindow::Save()
     else
     {
     fout.clear();
-    fout.write((char*)&save,sizeof(MainWindow));
+    fout.write((char*)&save,sizeof(save));
     }
     fout.close();
 
@@ -223,22 +231,26 @@ void MainWindow::Save()
 void MainWindow::LoadSave()
 {
     std::ifstream fin;
-    MainWindow load;
-    fin.open("save.txt",std::ios::binary | std::ios::in);
+    save point;
+    fin.open("save.dat",std::ios::binary | std::ios::in);
     if (!fin.is_open())
     {
         QMessageBox::critical(this,"","Error");
     }
-    fin.read((char*)&load,sizeof(MainWindow));
-    money=load.money;
-    day=load.day;
-    month=load.month;
-    year=load.year;
-    satiety=load.satiety;
-    hunger=load.hunger;
-    mental_condition=load.mental_condition;
-    HP=load.HP;
-    damage=load.damage;
-    jobID=load.jobID;
-    fin.close();
+    else {
+    fin.read((char*)&point,sizeof(save));
+    money=point.money;
+    day=point.day;
+    month=point.month;
+    year=point.year;
+    satiety=point.satiety;
+    hunger=point.hunger;
+    mental_condition=point.mental_condition;
+    HP=point.HP;
+    damage=point.damage;
+    jobID=point.jobID;
+    tireness=point.tireness;
+    }
+
   }
+

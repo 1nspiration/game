@@ -112,5 +112,5 @@ void MainWindow::LeisureOption13() // отправиться в путешест
         leisure_notEnoughMoney->setText("Недостаточно денег! Нужно ещё " + QString::number(17000 - money) + " р.");
         leisure_notEnoughMoney->show();
     }
-
 }
+

@@ -6,7 +6,8 @@
 #include <QMessageBox>
 #include <random>
 #include <fstream>
-
+#include <string>
+#include <stdlib.h>
 namespace Ui {
 class MainWindow;
 }
@@ -97,6 +98,18 @@ private slots:
     // слоты для рандомных ивентов
     void RandomEventsPoisoning(); // отравление
     void RandomEventsEasymoney(); // находка случайных денег
+};
+struct save {
+    unsigned long long money;
+    int day,
+        month,
+        year;
+
+    float satiety, hunger;
+    float mental_condition, tireness;
+    float HP;
+    float damage;
+    int jobID;
 };
 
 #endif // MAINWINDOW_H

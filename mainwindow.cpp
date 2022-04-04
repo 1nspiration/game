@@ -118,3 +118,4 @@ MainWindow::~MainWindow()
     delete hunger_death;
     delete shop_notEnoughMoney;
 }
+
