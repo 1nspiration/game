@@ -202,7 +202,8 @@ void MainWindow::jobStatus(int id)
 }
 void MainWindow::Save()
 {
-    save save;
+    save save;  // я создал структуру, потому что мне нужны только эти поля, а если, создавать объект класса, то записивается слишком много лишнего
+                // т.к мы в 1 класс засунули вообще все :D
     save.money=money;
     save.day=day;
     save.month=month;
@@ -252,6 +253,6 @@ void MainWindow::LoadSave()
     tireness=point.tireness;
     jobStatus(jobID);
     }
-
+    fin.close();
   }
 
