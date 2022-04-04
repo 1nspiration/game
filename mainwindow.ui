@@ -48,7 +48,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="TitleScreen">
      <widget class="QWidget" name="verticalLayoutWidget">
@@ -71,6 +71,20 @@
         <widget class="QPushButton" name="button_play">
          <property name="text">
           <string>Играть</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Save">
+         <property name="text">
+          <string>Сохранить игру</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="LoadSave">
+         <property name="text">
+          <string>Загрузить сохранение</string>
          </property>
         </widget>
        </item>

@@ -5,6 +5,8 @@
 #include <QTimer>
 #include <QMessageBox>
 #include <random>
+#include <fstream>
+
 namespace Ui {
 class MainWindow;
 }
@@ -16,8 +18,6 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
-
 private:
     Ui::MainWindow *ui;
     QTimer *timer;
@@ -40,8 +40,6 @@ private:
     QMessageBox *shop_notEnoughMoney;   //сообщение о недостатке денег для совершения покупки в магазине
     QMessageBox *leisure_notEnoughMoney; // сообщение о недостатке денег для совершения покупки в окне досуга
     QMessageBox *HP_death;               // сообщение о смерти
-    QMessageBox *Poisonning;             // сообщение об отравлении
-
 private slots:
     void quit();            //кнопка "Выйти"
     void startGame();       //кнопка "Играть"
@@ -50,7 +48,9 @@ private slots:
     void toStats();         //кнопка "Характеристики"
     void toJobs();          //кнопка "Работа"
     void toShop();          //кнопка "Магазин"
-    void toLeisure();
+    void toLeisure();       //кнопка "Досуг"
+    void LoadSave();        //загрузка сохранения
+    void Save();            //сохранение
     //слоты для магазина
     void shopOption1(); //Покопаться в мусорке
     void shopOption2(); //Съесть дошик

@@ -6,7 +6,9 @@
 //(2)(JobsScreen) - работа
 //(3)(ShopScreen) - магазин еды
 #include "mainwindow.cpp"
-
+#include <fstream>
+#include <string>
+#include <stdlib.h>
 void MainWindow::quit()
 {
     QApplication::quit();
@@ -201,3 +203,42 @@ void MainWindow::jobStatus(int id)
         break;
     }
 }
+void MainWindow::Save()
+{
+    MainWindow save;
+    std::ofstream fout;
+    fout.open("save.txt",std::ios::binary | std::ios::out);
+    if (!fout.is_open())
+    {
+        QMessageBox::critical(this,"","Error");
+    }
+    else
+    {
+    fout.clear();
+    fout.write((char*)&save,sizeof(MainWindow));
+    }
+    fout.close();
+
+}
+void MainWindow::LoadSave()
+{
+    std::ifstream fin;
+    MainWindow load;
+    fin.open("save.txt",std::ios::binary | std::ios::in);
+    if (!fin.is_open())
+    {
+        QMessageBox::critical(this,"","Error");
+    }
+    fin.read((char*)&load,sizeof(MainWindow));
+    money=load.money;
+    day=load.day;
+    month=load.month;
+    year=load.year;
+    satiety=load.satiety;
+    hunger=load.hunger;
+    mental_condition=load.mental_condition;
+    HP=load.HP;
+    damage=load.damage;
+    jobID=load.jobID;
+    fin.close();
+  }

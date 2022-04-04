@@ -22,6 +22,8 @@ MainWindow::MainWindow(QWidget *parent) :
     //Главное меню
     QObject::connect(ui->button_quit,           &QPushButton::clicked, this, &MainWindow::quit);
     QObject::connect(ui->button_play,           &QPushButton::clicked, this, &MainWindow::startGame);
+    QObject::connect(ui->Save,   &QPushButton::clicked, this, &MainWindow::Save);
+    QObject::connect(ui->LoadSave,   &QPushButton::clicked, this, &MainWindow::LoadSave);
     //Игровая панель
     QObject::connect(ui->button_back_title,     &QPushButton::clicked, this, &MainWindow::backToTitle);
     QObject::connect(ui->button_stats,          &QPushButton::clicked, this, &MainWindow::toStats);
@@ -73,7 +75,6 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(ui->button_leisure_option12,   &QPushButton::clicked, this, &MainWindow::LeisureOption12);
     QObject::connect(ui->button_leisure_option13,   &QPushButton::clicked, this, &MainWindow::LeisureOption13);
 
-
     //настройка внешнего вида интерфейса
     setFixedSize                                        (1000, 600);
 
@@ -87,6 +88,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->label_name->                    setStyleSheet   ("font-size: 50px"); //заголовок в главном меню
     ui->button_play->                   setFixedHeight  (50); //ширина кнопок регулируется параметрами layoutLeft(Right)margin, поэтому устанавливаю только высоту
     ui->button_quit->                   setFixedHeight  (50);
+    ui->Save->                          setFixedHeight  (50);
+    ui->LoadSave->                  setFixedHeight  (50);
     ui->progressBar_hunger->            setFormat       ("Сытость: " + QString::number(satiety) + ", затрата на день: " + QString::number(hunger));
     ui->progressBar_mental_condition->  setFormat       ("Настроение: " + QString::number(mental_condition) + ", затрата на день: " + QString::number(tireness));
     ui->progressBar_health->            setFormat       ("Здоровье: " + QString::number(HP)+ ", потери в день: " + QString::number(damage)); // здоровье может тратится в день в случае отравления или увеличиваться, когда ты ляжешь в больницу на пару дней, например, но по умолчание затраты =0
@@ -107,12 +110,7 @@ MainWindow::MainWindow(QWidget *parent) :
     shop_notEnoughMoney->               setModal        (true);
     leisure_notEnoughMoney =            new             QMessageBox();
     leisure_notEnoughMoney->            setModal        (true);
-    Poisonning =                        new             QMessageBox();
-    Poisonning->                        setText         ("Вы отравились");
-    Poisonning->                        setModal        (true);
-
 }
-
 MainWindow::~MainWindow()
 {
     delete ui;

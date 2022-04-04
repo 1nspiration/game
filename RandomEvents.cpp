@@ -5,7 +5,7 @@ void MainWindow::RandomEventsPoisoning()
     if (chanse==5)
     {
     HP-=8; // с таймером потом сделаем, пусть пока будет так
-    QMessageBox::information(this," ","Вы отравились");
+    QMessageBox::information(this," ","Вы отравились"); // их лучше писать так, мне кажется)
     }
 }
 void MainWindow::RandomEventsEasymoney()
